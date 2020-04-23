@@ -1,11 +1,14 @@
-import React, { Component } from 'react';
-import './App.css';
+import React, { Component } from "react";
+import { Container } from "react-bootstrap";
+import "./App.css";
 
 class App extends Component {
     render() {
-        return (
-            <div>
-                <h1>Pizza Delivery</h1>
+        return ( 
+            <div className = "container" >
+                <Container className="purchase-card">
+                    <h1>PizzaDelivery</h1>
+                </Container>
             </div>
         );
     }
