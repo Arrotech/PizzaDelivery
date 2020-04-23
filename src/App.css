@@ -25,3 +25,17 @@
 .item-details-button:focus {
     outline: none;
 }
+
+.collapse-item-details {
+    margin-top: 10px;
+}
+
+.media-pad {
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+
+.price-strike {
+    text-decoration-line: line-through;
+    color: grey;
+}
