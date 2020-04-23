@@ -10,3 +10,18 @@
 .purchase-card>.show-grid {
     padding-bottom: 1.5em;
 }
+
+.item-details-button {
+    background: none;
+    color: #000000;
+    border: none;
+}
+
+.item-details-button:hover {
+    background: none;
+    color: royalblue;
+}
+
+.item-details-button:focus {
+    outline: none;
+}
