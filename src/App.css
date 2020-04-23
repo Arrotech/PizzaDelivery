@@ -1,5 +1,7 @@
 .container {
     margin-top: 20px;
+    width: 400px;
+    padding: 10px;
 }
 
 .purchase-card {
@@ -38,4 +40,23 @@
 .price-strike {
     text-decoration-line: line-through;
     color: grey;
+}
+
+.promo-code-button {
+    background: none;
+    color: #000000;
+    border: none;
+}
+
+.promo-code-button:hover {
+    background: none;
+    color: royalblue;
+}
+
+.promo-code-button:focus {
+    outline: none;
+}
+
+.media-content {
+    padding-left: 20px;
 }
