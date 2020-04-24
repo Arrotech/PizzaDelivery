@@ -71,7 +71,7 @@ class PromoCode extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  promoCode: state.promoCode.value,
+  promoCode: state.promoCode.value
 });
 
 export default connect(mapStateToProps, { handleChange })(PromoCode);
