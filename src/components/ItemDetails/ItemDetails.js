@@ -24,7 +24,7 @@ export default class ItemDetails extends Component {
           <div className="media-pad">
             <Media className="media-item-details">
               <img width={100} height={100} alt="thumbnail" src="pizza.jpg" />
-              <Media.Body>
+              <Media.Body className="media-content">
                 <p>
                   Pizza 10 inches large ingredients meat, cheese, cream, lemon
                 </p>
