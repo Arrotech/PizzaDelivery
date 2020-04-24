@@ -64,3 +64,24 @@
 .checkout-button {
     width: 370px;
 }
+
+.container-registration {
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.registration-form {
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0, 0.2), 0 6px 20px 0 rgb(0, 0, 0, 0.19);
+    padding: 1em;
+}
+
+.sign-up-container {
+    background-color: #f1f1f1;
+}
+
+.sign-up-container h1 {
+    padding-top: 20px;
+    padding-bottom: 0;
+    text-align: center;
+    color: #000000;
+}
