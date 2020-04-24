@@ -6,6 +6,8 @@ import Taxes from "./components/Taxes/Taxes";
 import Total from "./components/Total/Total";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import PromoCode from "./components/PromoCode/PromoCode";
+import Registration from "./components/Registration/Registration";
+import Checkout from "./components/Checkout/Checkout";
 import { connect } from "react-redux";
 import { handleChange } from "./actions/promoCodeActions";
 import "./App.css";
@@ -67,6 +69,8 @@ class App extends Component {
             giveDiscount={() => this.giveDiscountHandler()}
             isDisable={this.state.disablePromoButton}
           />
+          <hr/>
+          <Checkout/>
         </Container>
       </div>
     );
