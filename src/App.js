@@ -19,7 +19,7 @@ class App extends Component {
       PickupSavings: -3.85,
       taxes: 0,
       estimatedTotal: 0,
-      disablePromoButton: false,
+      disablePromoButton: false
     };
   }
 
@@ -41,11 +41,11 @@ class App extends Component {
     if (this.props.promoCode === "DISCOUNT") {
       this.setState(
         {
-          estimatedTotal: this.state.estimatedTotal * 0.9,
+          estimatedTotal: this.state.estimatedTotal * 0.9
         },
         function () {
           this.setState({
-            disablePromoButton: true,
+            disablePromoButton: true
           });
         }
       );
@@ -65,7 +65,7 @@ class App extends Component {
           <hr />
           <PromoCode
             giveDiscount={() => this.giveDiscountHandler()}
-            isDisabled={this.state.disablePromoButton}
+            isDisable={this.state.disablePromoButton}
           />
         </Container>
       </div>
@@ -74,7 +74,7 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  promoCode: state.promoCode.value,
+  promoCode: state.promoCode.value
 });
 
 export default connect(mapStateToProps, { handleChange })(App);
