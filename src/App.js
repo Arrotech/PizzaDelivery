@@ -9,11 +9,12 @@ import PromoCode from "./components/PromoCode/PromoCode";
 import Registration from "./components/Registration/Registration";
 import Home from "./components/Home/Home";
 import OrderCards from "./components/OrderCards/OrderCards";
+import "./App.css";
+import Footer from "./components/Footer/Footer";
 import { connect } from "react-redux";
 import { handleChange } from "./actions/promoCodeActions";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "react-router-dom/Route";
-import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -79,6 +80,7 @@ class App extends Component {
               <div>
                 <Home />
                 <OrderCards />
+                <Footer/>
               </div>
             );
           }}
