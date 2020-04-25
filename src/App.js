@@ -9,12 +9,13 @@ import PromoCode from "./components/PromoCode/PromoCode";
 import Registration from "./components/Registration/Registration";
 import Home from "./components/Home/Home";
 import OrderCards from "./components/OrderCards/OrderCards";
-import "./App.css";
 import Footer from "./components/Footer/Footer";
+import Login from "./components/Login/Login";
 import { connect } from "react-redux";
 import { handleChange } from "./actions/promoCodeActions";
 import { BrowserRouter as Router } from "react-router-dom";
 import Route from "react-router-dom/Route";
+import "./App.css";
 
 class App extends Component {
   constructor(props) {
@@ -80,7 +81,7 @@ class App extends Component {
               <div>
                 <Home />
                 <OrderCards />
-                <Footer/>
+                <Footer />
               </div>
             );
           }}
@@ -131,6 +132,21 @@ class App extends Component {
                   <h1>Sign Up</h1>
                 </div>
                 <Registration />
+              </div>
+            );
+          }}
+        />
+        <Route
+          path="/login"
+          exact
+          strict
+          render={() => {
+            return (
+              <div className="login-app-container">
+                <div>
+                  <h1>Login</h1>
+                </div>
+                <Login />
               </div>
             );
           }}
