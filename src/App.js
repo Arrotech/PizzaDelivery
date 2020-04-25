@@ -7,7 +7,8 @@ import Total from "./components/Total/Total";
 import ItemDetails from "./components/ItemDetails/ItemDetails";
 import PromoCode from "./components/PromoCode/PromoCode";
 import Registration from "./components/Registration/Registration";
-import Checkout from "./components/Checkout/Checkout";
+import Home from "./components/Home/Home";
+import OrderCards from "./components/OrderCards/OrderCards";
 import { connect } from "react-redux";
 import { handleChange } from "./actions/promoCodeActions";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -70,7 +71,22 @@ class App extends Component {
     return (
       <Router>
         <Route
+          path="/home"
+          exact
+          strict
+          render={() => {
+            return (
+              <div>
+                <Home />
+                <OrderCards />
+              </div>
+            );
+          }}
+        />
+        <Route
           path="/summary-card"
+          exact
+          strict
           render={() => {
             return (
               <div className="container">
@@ -104,6 +120,8 @@ class App extends Component {
         />
         <Route
           path="/sign-up"
+          exact
+          strict
           render={() => {
             return (
               <div className="sign-up-container">
