@@ -107,3 +107,17 @@
 .home-header img {
     height: 600px;
 }
+
+.text-center {
+    width: 100%;
+}
+
+.page-footer {
+    background-color: #f1f1f1;
+    color: #000000;
+}
+
+.py-4 {
+    background-color: #252525;
+    color: #f1f1f1;
+}
