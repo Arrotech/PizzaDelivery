@@ -85,3 +85,12 @@
     text-align: center;
     color: #000000;
 }
+
+.order-btn {
+    color: royalblue;
+}
+
+.mdb-container {
+    width: 100%;
+    background-color: #f2f2f2;
+}
