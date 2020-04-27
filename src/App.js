@@ -71,87 +71,92 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
-        <Route
-          path="/home"
-          exact
-          strict
-          render={() => {
-            return (
-              <div>
-                <Home />
-                <OrderCards />
-                <Footer />
-              </div>
-            );
-          }}
-        />
-        <Route
-          path="/summary-card"
-          exact
-          strict
-          render={() => {
-            return (
-              <div className="container">
-                <Container className="purchase-card">
-                  <Subtotal price={this.state.total.toFixed(2)} />
-                  <PickupSavings price={this.state.PickupSavings} />
-                  <Taxes taxes={this.state.taxes.toFixed(2)} />
-                  <hr />
-                  <Total price={this.state.estimatedTotal.toFixed(2)} />
-                  <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
-                  <hr />
-                  <PromoCode
-                    giveDiscount={() => this.giveDiscountHandler()}
-                    isDisable={this.state.disablePromoButton}
-                  />
-                  <hr />
-                  <Button
-                    className="checkout-button"
-                    variant="primary"
-                    size="sm"
-                    onClick={() => {
-                      this.setState({ visible: true });
-                    }}
-                  >
-                    CHECKOUT
-                  </Button>
-                </Container>
-              </div>
-            );
-          }}
-        />
-        <Route
-          path="/sign-up"
-          exact
-          strict
-          render={() => {
-            return (
-              <div className="sign-up-container">
+      <div>
+        <Home />
+        <OrderCards />
+        <Footer />
+        <Router>
+          <Route
+            path="/home"
+            exact
+            strict
+            render={() => {
+              return (
                 <div>
-                  <h1>Sign Up</h1>
+                  <Home />
+                  <OrderCards />
+                  <Footer />
                 </div>
-                <Registration />
-              </div>
-            );
-          }}
-        />
-        <Route
-          path="/login"
-          exact
-          strict
-          render={() => {
-            return (
-              <div className="login-app-container">
-                <div>
-                  <h1>Login</h1>
+              );
+            }}
+          />
+          <Route
+            path="/summary-card"
+            exact
+            strict
+            render={() => {
+              return (
+                <div className="container">
+                  <Container className="purchase-card">
+                    <Subtotal price={this.state.total.toFixed(2)} />
+                    <PickupSavings price={this.state.PickupSavings} />
+                    <Taxes taxes={this.state.taxes.toFixed(2)} />
+                    <hr />
+                    <Total price={this.state.estimatedTotal.toFixed(2)} />
+                    <ItemDetails price={this.state.estimatedTotal.toFixed(2)} />
+                    <hr />
+                    <PromoCode
+                      giveDiscount={() => this.giveDiscountHandler()}
+                      isDisable={this.state.disablePromoButton}
+                    />
+                    <hr />
+                    <Button
+                      className="checkout-button"
+                      variant="primary"
+                      size="sm"
+                      onClick={() => {
+                        this.setState({ visible: true });
+                      }}
+                    >
+                      CHECKOUT
+                    </Button>
+                  </Container>
                 </div>
-                <Login />
-              </div>
-            );
-          }}
-        />
-      </Router>
+              );
+            }}
+          />
+          <Route
+            path="/sign-up"
+            exact
+            strict
+            render={() => {
+              return (
+                <div className="sign-up-container">
+                  <div>
+                    <h1>Sign Up</h1>
+                  </div>
+                  <Registration />
+                </div>
+              );
+            }}
+          />
+          <Route
+            path="/login"
+            exact
+            strict
+            render={() => {
+              return (
+                <div className="login-app-container">
+                  <div>
+                    <h1>Login</h1>
+                  </div>
+                  <Login />
+                </div>
+              );
+            }}
+          />
+        </Router>
+      </div>
     );
   }
 }
